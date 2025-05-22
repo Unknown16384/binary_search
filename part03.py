@@ -23,9 +23,9 @@ def compare(arr_len, index=-1):
     a = timeit.timeit(lambda: linear_search(arr_new, index), number=1000)
     b = timeit.timeit(lambda: binary_search(arr_new, index), number=1000)
     if a <= b:
-        print(f'линейный поиск эффективнее на {1-a/b:.2%}')
+        print(f'линейный поиск эффективнее на {b/a-1:.2%}')
     else:
-        print(f'бинарный поиск эффективнее на {1-b/a:.2%}')
+        print(f'бинарный поиск эффективнее на {a/b-1:.2%}')
 
 compare(10)
 compare(15)
